@@ -1,0 +1,13 @@
+
+version: '3'
+services:
+    ml_cpp:
+        image: machine_learning_with_cpp_env:latest
+        container_name: machine_learning_with_cpp_container
+        tty: true
+        stdin_open: true
+        ports:
+            - 8888:8888
+        volumes:
+            - ./:/workspace
+            - /mnt/e:/workspace/dataset
